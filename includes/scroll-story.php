@@ -5,7 +5,7 @@ $chapters = [
   ["kicker" => "Chapter 03", "title" => "Recovered, faster", "body" => "Mitochondrial repair compounds, electrolyte plasma, and sleep-grade REM optimization — engineered as one system.", "img" => "assets/product-watch.jpg"]
 ];
 ?>
-<section id="scroll-story-section" class="relative overflow-hidden" style="height: <?php echo count($chapters) * 100 + 100; ?>vh;">
+<section id="scroll-story-section" class="relative overflow-hidden" style="height: <?php echo count($chapters) * 100; ?>vh;">
   <!-- Sticky cinematic visual -->
   <div class="sticky top-0 h-screen overflow-hidden">
     <?php foreach ($chapters as $i => $c): ?>
@@ -37,7 +37,7 @@ $chapters = [
   </div>
 
   <!-- Scrolling chapters text -->
-  <div class="relative" style="margin-top: -300vh;">
+  <div class="relative" style="margin-top: -100vh; z-index: 10;">
     <?php foreach ($chapters as $i => $c): ?>
       <div class="flex h-screen items-center px-6">
         <div class="reveal-item mx-auto w-full max-w-[1400px]" style="<?php echo $i % 2 ? 'text-align: right;' : 'text-align: left;'; ?>">

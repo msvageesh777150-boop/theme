@@ -44,7 +44,7 @@
           <img src="assets/athlete.jpg" alt="Elite Athlete Telemetry" class="w-full h-full object-cover" />
           
           <!-- Live statistics badges overlay -->
-          <div class="glass-strong absolute bottom-6 left-6 max-w-[220px] rounded-xl p-4 z-20 shadow-glow-blue">
+          <div class="glass-strong z-20 shadow-glow-blue rounded-xl p-4" style="position: absolute; bottom: 1.5rem; left: 1.5rem; max-width: 220px;">
             <div class="text-[9px] tracking-[0.25em] uppercase text-muted-foreground">Live · Heart rate</div>
             <div class="mt-1 font-display text-2xl">142<span class="text-xs text-muted-foreground">bpm</span></div>
             <div class="mt-2 flex gap-1">
@@ -54,7 +54,7 @@
             </div>
           </div>
           
-          <div class="glass-strong absolute top-6 right-6 rounded-xl p-3 text-right shadow-glow-lime z-20">
+          <div class="glass-strong z-20 shadow-glow-lime rounded-xl p-3 text-right" style="position: absolute; top: 1.5rem; right: 1.5rem;">
             <div class="text-[9px] tracking-[0.25em] uppercase text-muted-foreground">Lactate</div>
             <div class="font-display text-xl">2.1<span class="text-xs text-muted-foreground"> mmol</span></div>
           </div>
