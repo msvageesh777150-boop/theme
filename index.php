@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="relative min-h-screen bg-background grain">
+    <div class="relative min-h-screen overflow-x-hidden bg-background grain">
       <?php include "includes/loader.php"; ?>
       <?php include "includes/cursor.php"; ?>
       <?php include "includes/nav.php"; ?>
