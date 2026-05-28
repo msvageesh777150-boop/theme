@@ -785,10 +785,23 @@ const init = () => {
   const revealElements = document.querySelectorAll(".reveal-item");
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add("visible");
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        revealObserver.unobserve(e.target);
+      }
     });
-  }, { threshold: 0.1, rootMargin: "-40px" });
+  }, { threshold: 0.01, rootMargin: "0px 0px 200px 0px" });
   revealElements.forEach(el => revealObserver.observe(el));
+
+  // Run initial check to force visibility on load for top-level elements
+  setTimeout(() => {
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) {
+        el.classList.add("visible");
+      }
+    });
+  }, 100);
 
   // --- Pinned Anatomy horizontal track (System 10) ---
   const anatomySection = document.getElementById("anatomy-section");
