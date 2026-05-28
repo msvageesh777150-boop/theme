@@ -41,14 +41,7 @@
           <div class="absolute top-0 inset-x-0 h-40 opacity-30 blur-2xl transition-smooth" style="background: radial-gradient(ellipse at top, var(--electric) 0%, transparent 70%);"></div>
 
           <!-- Static Athlete Image -->
-          <img src="assets/athlete.jpg" alt="Elite Athlete Telemetry" class="w-full h-full object-cover" style="opacity: 0.85; filter: grayscale(0.1) contrast(1.05);" />
-          
-          <!-- Premium gradient overlay to blend the white image background perfectly into the deep page background -->
-          <div class="absolute inset-0 z-10 pointer-events-none" style="background: 
-            radial-gradient(circle at center, transparent 35%, var(--background) 98%),
-            linear-gradient(to right, var(--background) 0%, transparent 15%, transparent 85%, var(--background) 100%),
-            linear-gradient(to bottom, var(--background) 0%, transparent 15%, transparent 85%, var(--background) 100%);">
-          </div>
+          <img src="assets/athlete.jpg" alt="Elite Athlete Telemetry" class="w-full h-full object-cover" />
           
           <!-- Live statistics badges overlay -->
           <div class="glass-strong z-20 shadow-glow-blue rounded-xl p-4" style="position: absolute; bottom: 1.5rem; left: 1.5rem; max-width: 220px;">
