@@ -36,36 +36,28 @@
 
     <div class="relative lg-col-span-7">
       <div class="reveal-item relative flex flex-col gap-6">
-        <div class="glass relative overflow-hidden rounded-[2rem] flex flex-col items-center justify-center p-6" style="min-height: 520px;">
+        <div class="glass relative overflow-hidden rounded-[2rem] p-0" style="min-height: 520px; height: 520px;">
           <!-- Spotlighting vector glow backings -->
-          <div id="jersey-light-beam" class="absolute top-0 inset-x-0 h-40 opacity-30 blur-2xl transition-smooth" style="background: radial-gradient(ellipse at top, var(--electric) 0%, transparent 70%);"></div>
+          <div class="absolute top-0 inset-x-0 h-40 opacity-30 blur-2xl transition-smooth" style="background: radial-gradient(ellipse at top, var(--electric) 0%, transparent 70%);"></div>
 
-          <!-- Dynamic Draggable Canvas -->
-          <canvas id="jersey-3d-canvas" class="relative z-10 w-full max-w-[480px] h-[400px] cursor-none" aria-label="Interactive 3D rotating apparel compression jersey simulator"></canvas>
-
-          <!-- Swatch Selectors Overlay -->
-          <div class="relative z-20 flex gap-4 mt-4 bg-black/60 px-6 py-3 rounded-full border border-white/10 backdrop-blur">
-            <button onclick="setJerseyColor('electric', '#00f2fe')" class="w-6 h-6 rounded-full border-2 border-white/20 transition-smooth hover:scale-110 active:scale-95" style="background-color: oklch(0.68 0.22 250);"></button>
-            <button onclick="setJerseyColor('purple', '#9b51e0')" class="w-6 h-6 rounded-full border-2 border-white/20 transition-smooth hover:scale-110 active:scale-95" style="background-color: oklch(0.55 0.24 305);"></button>
-            <button onclick="setJerseyColor('orange', '#f2994a')" class="w-6 h-6 rounded-full border-2 border-white/20 transition-smooth hover:scale-110 active:scale-95" style="background-color: oklch(0.75 0.2 50);"></button>
-            <button onclick="setJerseyColor('lime', '#27ae60')" class="w-6 h-6 rounded-full border-2 border-white/20 transition-smooth hover:scale-110 active:scale-95" style="background-color: oklch(0.88 0.2 130);"></button>
+          <!-- Static Athlete Image -->
+          <img src="assets/athlete.jpg" alt="Elite Athlete Telemetry" class="w-full h-full object-cover" />
+          
+          <!-- Live statistics badges overlay -->
+          <div class="glass-strong absolute bottom-6 left-6 max-w-[220px] rounded-xl p-4 z-20 shadow-glow-blue">
+            <div class="text-[9px] tracking-[0.25em] uppercase text-muted-foreground">Live · Heart rate</div>
+            <div class="mt-1 font-display text-2xl">142<span class="text-xs text-muted-foreground">bpm</span></div>
+            <div class="mt-2 flex gap-1">
+              <?php for ($i=0; $i<18; $i++): ?>
+                <span class="w-1 rounded-full bg-electric" style="height: <?php echo 5 + ($i % 4) * 3; ?>px;"></span>
+              <?php endfor; ?>
+            </div>
           </div>
-        </div>
-        
-        <!-- Live statistics badges -->
-        <div class="glass-strong absolute bottom-4 left-4 max-w-[220px] rounded-xl p-4 z-20">
-          <div class="text-[9px] tracking-[0.25em] uppercase text-muted-foreground">Live · Heart rate</div>
-          <div class="mt-1 font-display text-2xl">142<span class="text-xs text-muted-foreground">bpm</span></div>
-          <div class="mt-2 flex gap-1">
-            <?php for ($i=0; $i<18; $i++): ?>
-              <span class="w-1 rounded-full bg-electric" style="height: <?php echo 5 + ($i % 4) * 3; ?>px;"></span>
-            <?php endfor; ?>
+          
+          <div class="glass-strong absolute top-6 right-6 rounded-xl p-3 text-right shadow-glow-lime z-20">
+            <div class="text-[9px] tracking-[0.25em] uppercase text-muted-foreground">Lactate</div>
+            <div class="font-display text-xl">2.1<span class="text-xs text-muted-foreground"> mmol</span></div>
           </div>
-        </div>
-        
-        <div class="glass-strong absolute top-4 right-4 rounded-xl p-3 text-right shadow-glow-lime z-20">
-          <div class="text-[9px] tracking-[0.25em] uppercase text-muted-foreground">Lactate</div>
-          <div class="font-display text-xl">2.1<span class="text-xs text-muted-foreground"> mmol</span></div>
         </div>
       </div>
     </div>

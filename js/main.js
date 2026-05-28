@@ -501,6 +501,68 @@ const init = () => {
         { "title": "Compression Layer 02", "img": "assets/product-apparel.jpg", "tone": "AeroMesh · seamless", "price": 7885, "tag": "Apparel" }
       ];
     });
+    
+  window.addToCartAndOpen = (title) => {
+    // Clean up title (handles HTML tags like tags or sub/sup scripts)
+    const cleanTitle = title.replace(/<\/?[^>]+(>|$)/g, " ").replace(/\s+/g, " ").trim();
+    
+    // Find the product in catalogueProducts
+    let p = catalogueProducts.find(item => {
+      const cleanItemTitle = item.title.replace(/<\/?[^>]+(>|$)/g, " ").replace(/\s+/g, " ").trim();
+      return cleanItemTitle.toLowerCase() === cleanTitle.toLowerCase();
+    });
+    
+    // If not found by name, try fallback matching
+    if (!p) {
+      p = catalogueProducts.find(item => {
+        const cleanItemTitle = item.title.replace(/<\/?[^>]+(>|$)/g, " ").replace(/\s+/g, " ").trim();
+        return cleanItemTitle.toLowerCase().includes(cleanTitle.toLowerCase()) || cleanTitle.toLowerCase().includes(cleanItemTitle.toLowerCase());
+      });
+    }
+
+    if (!p) return;
+
+    const idx = cart.findIndex(it => it.product.title === p.title);
+    if (idx > -1) {
+      cart[idx].qty += 1;
+    } else {
+      cart.push({ product: p, qty: 1 });
+    }
+
+    updateCartDOM();
+    window.openCart();
+  };
+
+  window.buyActiveHeroProduct = () => {
+    const heroProduct = heroProducts[currentHeroIdx];
+    if (!heroProduct) return;
+    
+    // Clean and extract name
+    const cleanTitle = heroProduct.title.replace(/<\/?[^>]+(>|$)/g, " ").replace(/\s+/g, " ").trim();
+    
+    // Find the matching product in the catalogue
+    let p = catalogueProducts.find(item => {
+      const cleanCatTitle = item.title.toLowerCase();
+      if (cleanTitle.toLowerCase().includes("creatine") && cleanCatTitle.includes("protein")) return true;
+      if (cleanTitle.toLowerCase().includes("runner") && cleanCatTitle.includes("runner")) return true;
+      if (cleanTitle.toLowerCase().includes("aeromesh") && cleanCatTitle.includes("apparel")) return true;
+      if (cleanTitle.toLowerCase().includes("plasma") && cleanCatTitle.includes("bottle")) return true;
+      if (cleanTitle.toLowerCase().includes("smart") && cleanCatTitle.includes("watch")) return true;
+      return false;
+    });
+
+    if (!p) {
+      p = catalogueProducts.find(item => cleanTitle.toLowerCase().includes(item.title.toLowerCase()) || item.title.toLowerCase().includes(cleanTitle.toLowerCase()));
+    }
+
+    if (!p) {
+      p = catalogueProducts[0];
+    }
+
+    if (p) {
+      window.addToCartAndOpen(p.title);
+    }
+  };
 
   window.openProductDetail = (title) => {
     const p = catalogueProducts.find(item => item.title === title);

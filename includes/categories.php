@@ -26,7 +26,7 @@ $products = json_decode($productsJson, true);
     <?php foreach ($products as $it): ?>
       <?php if ($it['featured']): ?>
         <div class="reveal-item">
-          <a href="#" role="button" aria-haspopup="dialog" aria-label="View details for <?php echo htmlspecialchars($it['title']); ?>" onclick="event.preventDefault(); openProductDetail('<?php echo htmlspecialchars($it['title']); ?>')" class="group glass relative mb-8 grid overflow-hidden rounded-2xl-strong card-tilt" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));">
+          <a href="#" role="button" aria-haspopup="dialog" aria-label="View details for <?php echo htmlspecialchars($it['title']); ?>" onclick="event.preventDefault(); addToCartAndOpen('<?php echo htmlspecialchars($it['title']); ?>')" class="group glass relative mb-8 grid overflow-hidden rounded-2xl-strong card-tilt" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));">
             <div class="relative aspect-[5/4] overflow-hidden" style="aspect-ratio: 5/4;">
               <img
                 src="<?php echo $it['img']; ?>"
@@ -62,7 +62,7 @@ $products = json_decode($productsJson, true);
       <?php foreach ($products as $it): ?>
         <?php if (!$it['featured']): ?>
           <div class="reveal-item" style="transition-delay: <?php echo $delayIndex * 0.08; ?>s;">
-            <a href="#" role="button" aria-haspopup="dialog" aria-label="View details for <?php echo htmlspecialchars($it['title']); ?>" onclick="event.preventDefault(); openProductDetail('<?php echo htmlspecialchars($it['title']); ?>')" class="group glass relative block overflow-hidden rounded-3xl transition-smooth card-tilt categories-grid-card" style="aspect-ratio: 1/1;">
+            <a href="#" role="button" aria-haspopup="dialog" aria-label="View details for <?php echo htmlspecialchars($it['title']); ?>" onclick="event.preventDefault(); addToCartAndOpen('<?php echo htmlspecialchars($it['title']); ?>')" class="group glass relative block overflow-hidden rounded-3xl transition-smooth card-tilt categories-grid-card" style="aspect-ratio: 1/1;">
               <!-- Specular reflection sweep line -->
               <div class="absolute inset-0 pointer-events-none z-10" style="background: linear-gradient(135deg, transparent 35%, rgba(255,255,255,0.12) 50%, transparent 65%); transform: translate3d(-100%, -100%, 0); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); will-change: transform;" data-sheen></div>
               

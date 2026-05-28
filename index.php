@@ -21,7 +21,6 @@
       <main>
         <?php include "includes/hero.php"; ?>
         <?php include "includes/marquee.php"; ?>
-        <?php include "includes/reactor.php"; ?>
         <?php include "includes/categories.php"; ?>
         <?php include "includes/anatomy.php"; ?>
         <?php include "includes/scroll-story.php"; ?>

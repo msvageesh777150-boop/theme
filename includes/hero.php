@@ -32,12 +32,12 @@
       </p>
 
       <div class="mt-10 flex flex-wrap items-center gap-4">
-        <button onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})" class="btn-magnetic primary px-8 py-4" data-magnetic>
+        <button onclick="buyActiveHeroProduct()" class="btn-magnetic primary px-8 py-4" data-magnetic>
           <span class="btn-magnetic-bg"></span>
           Shop the Drop →
         </button>
-        <button onclick="document.getElementById('reactor-centerpiece').scrollIntoView({behavior: 'smooth'})" class="btn-magnetic ghost px-8 py-4" data-magnetic>
-          Explore Core
+        <button onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})" class="btn-magnetic ghost px-8 py-4" data-magnetic>
+          Explore Ecosystem
         </button>
       </div>
 
