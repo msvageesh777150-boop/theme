@@ -18,8 +18,8 @@ $chapters = [
         </div>
       <?php endforeach; ?>
       
-      <div class="absolute inset-0" style="opacity: 0.7; transition: opacity 0.5s ease-out;">
-        <div class="absolute inset-0" style="background: radial-gradient(60% 60% at 50% 60%, transparent 0%, oklch(0.1 0.03 280 / 0.95) 80%);"></div>
+      <div class="absolute inset-0" style="opacity: 0.5; transition: opacity 0.5s ease-out;">
+        <div class="absolute inset-0" style="background: radial-gradient(60% 60% at 50% 60%, transparent 0%, oklch(0.11 0.015 280 / 0.5) 80%);"></div>
       </div>
       <div class="absolute inset-0 mix-blend-screen opacity-30 bg-aurora animate-aurora"></div>
 

@@ -35,13 +35,12 @@
     </div>
 
     <div class="relative lg-col-span-7">
-      <div class="reveal-item relative flex flex-col gap-6">
-        <div class="glass relative overflow-hidden rounded-[2rem] p-0" style="min-height: 520px; height: 520px;">
+        <div class="glass relative overflow-hidden p-0" style="min-height: 520px; height: 520px; border-radius: 2rem !important; overflow: hidden; position: relative;">
           <!-- Spotlighting vector glow backings -->
           <div class="absolute top-0 inset-x-0 h-40 opacity-30 blur-2xl transition-smooth" style="background: radial-gradient(ellipse at top, var(--electric) 0%, transparent 70%);"></div>
 
           <!-- Static Athlete Image -->
-          <img src="assets/athlete.jpg" alt="Elite Athlete Telemetry" class="w-full h-full object-cover" />
+          <img src="assets/athlete.jpg" alt="Elite Athlete Telemetry" class="w-full h-full object-cover" style="border-radius: 2rem !important;" />
           
           <!-- Live statistics badges overlay -->
           <div class="glass-strong z-20 shadow-glow-blue rounded-xl p-4" style="position: absolute; bottom: 1.5rem; left: 1.5rem; max-width: 220px;">
@@ -61,5 +60,4 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
