@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Whey Protein Reactor",
+    "code": "01 / SUP",
+    "img": "assets/product-protein.jpg",
+    "tone": "Lean synthesis · 27g",
+    "price": 5312,
+    "glow": "shadow-glow-purple",
+    "tag": "Supplements",
+    "featured": false
+  },
+  {
+    "title": "Velocity Runner V3",
+    "code": "02 / FTW",
+    "img": "assets/product-shoe.jpg",
+    "tone": "Carbon plate · 178g",
+    "price": 18260,
+    "glow": "shadow-glow-orange",
+    "tag": "Footwear",
+    "featured": true
+  },
+  {
+    "title": "Pulse Smartwatch",
+    "code": "03 / WRB",
+    "img": "assets/product-watch.jpg",
+    "tone": "Titanium · 96h battery",
+    "price": 39840,
+    "glow": "shadow-glow-blue",
+    "tag": "Wearables",
+    "featured": false
+  },
+  {
+    "title": "HydroCore Bottle",
+    "code": "04 / HYD",
+    "img": "assets/product-hydration.jpg",
+    "tone": "Vacuum steel · 750ml",
+    "price": 3984,
+    "glow": "shadow-glow-lime",
+    "tag": "Hydration",
+    "featured": false
+  },
+  {
+    "title": "Compression Layer 02",
+    "code": "05 / APP",
+    "img": "assets/product-apparel.jpg",
+    "tone": "AeroMesh · seamless",
+    "price": 7885,
+    "glow": "shadow-glow-purple",
+    "tag": "Apparel",
+    "featured": false
+  }
+]

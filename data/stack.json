@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ignite",
+    "label": "Ignite",
+    "desc": "Pre-training neural primer",
+    "price": 3486
+  },
+  {
+    "id": "sustain",
+    "label": "Sustain",
+    "desc": "Mid-session endurance lock",
+    "price": 3154
+  },
+  {
+    "id": "recover",
+    "label": "Recover",
+    "desc": "Post-session mitochondrial repair",
+    "price": 4648
+  },
+  {
+    "id": "sleep",
+    "label": "Sleep",
+    "desc": "Deep REM optimization",
+    "price": 3652
+  },
+  {
+    "id": "hydrate",
+    "label": "Hydrate",
+    "desc": "Electrolyte plasma matrix",
+    "price": 2324
+  },
+  {
+    "id": "focus",
+    "label": "Focus",
+    "desc": "Cognitive precision blend",
+    "price": 3984
+  }
+]
